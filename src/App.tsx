@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import QuestionsList from "./components/QuestionsList/QuestionsList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    const questions = [
+        {question: "Сколько вам лет?", id: 1},
+        {question: "Как вас зовут?", id: 2},
+        {question: "В каком городе вы живете?", id: 3},
+        {question: "Ваш любимый цвет?", id: 4},
+        {question: "У вас есть собака?", id: 5},
+        {question: "Любимая музыка?", id: 6},
+    ];
+    return (
+        <div>
+            <QuestionsList questions={questions}/>
+        </div>
+    );
+};
 
 export default App;
